@@ -9,42 +9,42 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-4 border p-2">
-      <h2>轟焦凍</h2>
+      <h2>緑谷出久</h2>
       <ul class="list-unstyled">
        <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>ヒーロー名　ショート</li>
+            <li>ヒーロー名　デク</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>個性　半冷半熱</li>
+            <li>個性　ワン・フォー・オール</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>学校学科　雄英高校ヒーロー科1年A組15番</li>
+            <li>学校学科　雄英高校ヒーロー科1年A組18番</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>出身校　凝山中学校</li>
+            <li>出身校　折寺中学校</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>誕生日　1月11日</li>
+            <li>誕生日　7月15日</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>身長176cm</li>
+            <li>身長166cm</li>
           </label>
         </div>
         <div class="form-check">
@@ -56,13 +56,72 @@
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>好きなもの　蕎麦（温かくないやつ）</li>
+            <li>好きなもの　カツ丼</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>性格　クール＆ホットな天然</li>
+            <li>性格　行動派オタク</li>
+          </label>
+        </div>
+      </ul>
+    </div>
+    <div class="col-12 col-md-4 border p-2">
+      <h2>爆豪勝己</h2>
+      <ul class="list-unstyled">
+       <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            <li>ヒーロー名　大・爆・殺・神ダイナマイト</li>
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            <li>個性　爆破</li>
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            <li>学校学科　雄英高校ヒーロー科1年A組17番</li>
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            <li>出身校　折寺中学校</li>
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            <li>誕生日　4月20日</li>
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            <li>身長172cm</li>
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            <li>血液型　A型</li>
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            <li>好きなもの　辛い食べ物全般、登山</li>
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            <li>性格　暴言自信家</li>
           </label>
         </div>
       </ul>
@@ -127,119 +186,60 @@
       </ul>
     </div>
     <div class="col-12 col-md-4 border p-2">
-      <h2>轟焦凍</h2>
+      <h2>麗日お茶子</h2>
       <ul class="list-unstyled">
        <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>ヒーロー名　ショート</li>
+            <li>ヒーロー名　ウラビティ</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>個性　半冷半熱</li>
+            <li>個性　無重力</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>学校学科　雄英高校ヒーロー科1年A組15番</li>
+            <li>学校学科　雄英高校ヒーロー科1年A組5番</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>出身校　凝山中学校</li>
+            <li>出身校　露座柳中学校</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>誕生日　1月11日</li>
+            <li>誕生日　12月27日</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>身長176cm</li>
+            <li>身長156cm</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>血液型　O型</li>
+            <li>血液型　B型</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>好きなもの　蕎麦（温かくないやつ）</li>
+            <li>好きなもの　お餅、星空</li>
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            <li>性格　クール＆ホットな天然</li>
-          </label>
-        </div>
-      </ul>
-    </div>
-    <div class="col-12 col-md-4 border p-2">
-      <h2>轟焦凍</h2>
-      <ul class="list-unstyled">
-       <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            <li>ヒーロー名　ショート</li>
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            <li>個性　半冷半熱</li>
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            <li>学校学科　雄英高校ヒーロー科1年A組15番</li>
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            <li>出身校　凝山中学校</li>
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            <li>誕生日　1月11日</li>
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            <li>身長176cm</li>
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            <li>血液型　O型</li>
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            <li>好きなもの　蕎麦（温かくないやつ）</li>
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            <li>性格　クール＆ホットな天然</li>
+            <li>性格　いつも麗らか</li>
           </label>
         </div>
       </ul>
