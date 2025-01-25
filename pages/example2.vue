@@ -12,7 +12,7 @@ const characters = [
     bloodType: "A型",
     likes: "辛い食べ物全般、登山",
     personality: "暴言自信家",
-    image:require('@/pages/img./ばくごう.jpg'),
+    image:"/img./ばくごう.jpg",
   },
   {
     rank: 8,
