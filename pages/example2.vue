@@ -497,6 +497,12 @@ const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
 </script>
 
 <template>
+<div class="title-wrapper text-center mb-5">
+  <h1 class="title">
+    僕のヒーローアカデミアキャラランキング
+  </h1>
+  <p class="subtitle">最強のヒーローたち、集結！</p>
+</div>
   <div class="container mt-5">
     <div class="row">
       <!-- 順位順で表示 -->
