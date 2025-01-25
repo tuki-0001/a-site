@@ -499,10 +499,11 @@ const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
 <template>
 <div class="title-wrapper text-center mb-5">
   <h1 class="title">
-    僕のヒーローアカデミアキャラランキング
+    僕のヒーローアカデミア キャラランキング
   </h1>
-  <p class="subtitle">最強のヒーローたち、集結！</p>
+  <p class="subtitle">魅力的なキャラたち、ここに集結！</p>
 </div>
+
   <div class="container mt-5">
     <div class="row">
       <!-- 順位順で表示 -->
@@ -624,5 +625,40 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+/* タイトルスタイル */
+.title-wrapper {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f0c674; /* 黄金色 */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  font-family: 'Impact', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff6347, #ffeb3b);
+  z-index: -1;
+  border-radius: 8px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 </style>
