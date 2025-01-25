@@ -26,7 +26,7 @@ const characters = [
     bloodType: null,
     likes: "蕎麦",
     personality: "つかめない",
-    image: "https://via.placeholder.com/120",
+    image: "/img./dabi.jpg",
   },
   {
     rank: 2,
@@ -68,7 +68,7 @@ const characters = [
     bloodType: "B型",
     likes: "ねこ",
     personality: "なんだかんだあまい",
-    image: "https://via.placeholder.com/120",
+    image: "/img./aizawa.jpg",
   },
   {
     rank: 5,
@@ -82,7 +82,7 @@ const characters = [
     bloodType: "O型",
     likes: "硬派な物、肉",
     personality: "快活ムードメーカー",
-    image: "https://via.placeholder.com/120",
+    image: "/img./kirishima.jpg",
   },
   {
     rank: 6,
@@ -96,7 +96,7 @@ const characters = [
     bloodType: "AB型",
     likes: "葛餅",
     personality: "頑固オヤジ",
-    image: "https://via.placeholder.com/120",
+    image: "/img./enn.jpg",
   },
   {
     rank: 7,
@@ -110,7 +110,7 @@ const characters = [
     bloodType: "B型",
     likes: "鶏肉",
     personality: "目聡く耳聡い",
-    image: "https://via.placeholder.com/120",
+    image: "/img./hokusu.jpg",
   },
   {
     rank: 9,
@@ -124,7 +124,7 @@ const characters = [
     bloodType: null,
     likes: "ゲーム",
     personality: "子ども大人",
-    image: "https://via.placeholder.com/120",
+    image: "/img./shigaraki.jpg",
   },
   {
     rank: 10,
@@ -138,7 +138,7 @@ const characters = [
     bloodType: "A型",
     likes: "フランス料理、バンド・デシネ",
     personality: "身内には優しい",
-    image: "https://via.placeholder.com/120",
+    image: "/img./monoma.jpg",
   },
   {
     rank: 11,
@@ -152,7 +152,7 @@ const characters = [
     bloodType: "B型",
     likes: "星空、和食",
     personality: "いつも麗らか",
-    image: "https://via.placeholder.com/120",
+    image: "/img./urara.jpg",
   },
   {
     rank: 12,
@@ -166,7 +166,7 @@ const characters = [
     bloodType: "A型",
     likes: "屋久杉・映画",
     personality: "意外とお茶目",
-    image: "https://via.placeholder.com/120",
+    image: "/img./oruma.jpg",
   },
   {
     rank: 13,
@@ -180,7 +180,7 @@ const characters = [
     bloodType: null,
     likes: "血、柘榴",
     personality: "惚れっぽい",
-    image: "https://via.placeholder.com/120",
+    image: "/img./toga.jpg",
   }, 
   {
     rank: 14,
@@ -194,7 +194,7 @@ const characters = [
     bloodType: "O型",
     likes: "流行ってるもの、ハンバーガー",
     personality: "チャラい系男子",
-    image: "https://via.placeholder.com/120",
+    image: "/img./kami.jpg",
   },
   {
     rank: 15,
@@ -208,7 +208,7 @@ const characters = [
     bloodType: "AB型",
     likes: "猫 、サイクリング",
     personality: "ストイック",
-    image: "https://via.placeholder.com/120",
+    image: "/img./mono.jpg",
   },
   {
     rank: 16,
@@ -222,7 +222,7 @@ const characters = [
     bloodType: "AB型",
     likes: "蝶",
     personality: "ネガティブ能力マン",
-    image: "https://via.placeholder.com/120",
+    image: "/img./sann.jpg",
   },
   {
     rank: 17,
@@ -236,7 +236,7 @@ const characters = [
     bloodType: null,
     likes: null,
     personality:"お調子者",
-    image: "https://via.placeholder.com/120",
+    image: "/img./rodhi.jpg",
   },
   {
     rank: 18,
@@ -250,7 +250,7 @@ const characters = [
     bloodType: "A型",
     likes: "勉強、ビーフシチュー",
     personality: "委員長気質",
-    image: "https://via.placeholder.com/120",
+    image: "/img./iida.jpg",
   },
   {
     rank: 19,
@@ -264,7 +264,7 @@ const characters = [
     bloodType: "AB型",
     likes: "リンゴ、薄暗い所",
     personality: "深淵を好むクール系",
-    image: "https://via.placeholder.com/120",
+    image: "/img./toko.jpg",
   },
   {
     rank: 20,
@@ -278,7 +278,7 @@ const characters = [
     bloodType: "A型",
     likes: "ロック",
     personality: "恥ずかしがり屋",
-    image: "https://via.placeholder.com/120",
+    image: "/img./iya.jpg",
   },
   {
     rank: 21,
