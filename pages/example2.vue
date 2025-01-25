@@ -54,7 +54,7 @@ const characters = [
     bloodType: "O型",
     likes: "蕎麦（温かくないやつ）",
     personality: "クール＆ホットな天然",
-    image: "",
+    image: "/img./shoto.jpg",
   },
   {
     rank: 4,
