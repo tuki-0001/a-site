@@ -292,7 +292,7 @@ const characters = [
     bloodType: "O型",
     likes: "ラーメン、お笑い",
     personality: "太陽的存在",
-    image: "https://via.placeholder.com/120",
+    image: "/img./miri.jpg",
   },
   {
     rank: 22,
@@ -306,7 +306,7 @@ const characters = [
     bloodType: "A型",
     likes: "読書（図鑑などを好む）",
     personality: "たまにポンコツ",
-    image: "https://via.placeholder.com/120",
+    image: "/img./yao.jpg",
   },
   {
     rank: 23,
@@ -320,7 +320,7 @@ const characters = [
     bloodType: "O型",
     likes: "にんじん",
     personality: "男勝り",
-    image: "https://via.placeholder.com/120",
+    image: "/img./miru.jpg",
   },
   {
     rank: 24,
@@ -334,7 +334,7 @@ const characters = [
     bloodType: "B型",
     likes: "健康に良い食べ物",
     personality: "空気読めるマン",
-    image: "https://via.placeholder.com/120",
+    image: "/img./sero.jpg",
   },
   {
     rank: 25,
@@ -348,7 +348,7 @@ const characters = [
     bloodType: "B型",
     likes: "ラジオ、TV",
     personality: "ハイテンション",
-    image: "https://via.placeholder.com/120",
+    image: "/img./yamada.jpg",
   },
   {
     rank: 26,
@@ -362,7 +362,7 @@ const characters = [
     bloodType: "B型",
     likes: "雨 、ゼリー",
     personality: "友達想いの冷静淑女",
-    image: "https://via.placeholder.com/120",
+    image: "/img./asui.jpg",
   },
   {
     rank: 27,
@@ -376,7 +376,7 @@ const characters = [
     bloodType: "O型",
     likes: "己",
     personality: "ナルシストな自由人",
-    image: "https://via.placeholder.com/120",
+    image: "/img./aoyama.jpg",
   },
   {
     rank: 28,
@@ -390,7 +390,7 @@ const characters = [
     bloodType: "B型",
     likes: "たこ焼き、イカスミパスタ",
     personality: "寡黙な紳士",
-    image: "https://via.placeholder.com/120",
+    image: "/img./tenn.jpg",
   },
   {
     rank: 29,
@@ -404,7 +404,7 @@ const characters = [
     bloodType: "B型",
     likes: "ユリの花、ジャスミンティー",
     personality: "好奇心旺盛",
-    image: "https://via.placeholder.com/120",
+    image: "/img./neji.jpg",
   },
   {
     rank: 30,
@@ -418,7 +418,7 @@ const characters = [
     bloodType: "AB型",
     likes: "狼",
     personality: "何事もビッチリ",
-    image: "https://via.placeholder.com/120",
+    image: "/img./besu.jpg",
   },
   {
     rank: 31,
@@ -432,7 +432,7 @@ const characters = [
     bloodType:"O型",
     likes: "煙草",
     personality: "支離滅裂",
-    image: "https://via.placeholder.com/120",
+    image: "/img./twu.jpg",
   },
   {
     rank: 32,
@@ -446,7 +446,7 @@ const characters = [
     bloodType: null,
     likes: "キレイなもの、かわいいもの",
     personality:"勝気で男勝り",
-    image: "https://via.placeholder.com/120",
+    image: "/img./re.jpg",
   },
   {
     rank: 33,
@@ -460,7 +460,7 @@ const characters = [
     bloodType: "AB型",
     likes: "ダンス、納豆、オクラ、恋バナ",
     personality: "元気100%",
-    image: "https://via.placeholder.com/120",
+    image: "/img./ashi.jpg",
   },
   {
     rank: 34,
@@ -474,7 +474,7 @@ const characters = [
     bloodType:null,
     likes: "カレー",
     personality: "気弱で温厚",
-    image: "https://via.placeholder.com/120",
+    image: "/img./hai.jpg",
   },
   {
     rank: 35,
@@ -488,7 +488,7 @@ const characters = [
     bloodType: "O型",
     likes: "武術",
     personality: "普通に努力家",
-    image: "https://via.placeholder.com/120",
+    image: "/img./oji.jpg",
   }, 
 ];
 
