@@ -40,7 +40,7 @@ const characters = [
     bloodType: "O型",
     likes: "カツ丼、ヒーロー分析ノート",
     personality: "真面目で努力家",
-    image: "https://via.placeholder.com/120",
+    image: "/img./deku.jpg",
   },
   {
     rank: 3,
