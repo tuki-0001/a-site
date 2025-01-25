@@ -54,7 +54,7 @@ const characters = [
     bloodType: "O型",
     likes: "蕎麦（温かくないやつ）",
     personality: "クール＆ホットな天然",
-    image: "https://via.placeholder.com/120",
+    image: "",
   },
   {
     rank: 4,
