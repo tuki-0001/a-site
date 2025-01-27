@@ -72,8 +72,3 @@ export default {
 }
 </script>
 
-<style scoped>
-.license-card {
- /* スタイルの例 */
-}
-</style>

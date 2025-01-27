@@ -13,8 +13,3 @@ export default {
 }
 </script>
 
-<style scoped>
-.title-wrapper {
- /* スタイルの例 */
-}
-</style>

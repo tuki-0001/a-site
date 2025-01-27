@@ -24,8 +24,3 @@ export default {
 }
 </script>
 
-<style scoped>
-.container {
- /* スタイルの例 */
-}
-</style>
