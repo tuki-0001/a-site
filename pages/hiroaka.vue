@@ -511,87 +511,47 @@ const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
 </script>
 
 <template>
-<div class="title-wrapper text-center mb-5">
-  <h1 class="title">
-    僕のヒーローアカデミア キャラランキング
-  </h1>
-  <p class="subtitle">魅力的なキャラたち、ここに集結！</p>
-</div>
-
-  <div class="container mt-5">
-    <div class="row">
-      <!-- 順位順で表示 -->
-      <div v-for="character in sortedCharacters" :key="character.rank" class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="license-card mx-auto p-3 shadow">
-          <!-- ヘッダー部分 -->
-          <div class="license-header text-center mb-3">
-            <h2 class="h5 mb-0">
-              <!-- 順位表示 -->
-              <span class="rank-circle">{{ character.rank }}</span> {{ character.name }}
-            </h2>
-          </div>
-          <!-- メイン部分 -->
-          <div class="d-flex align-items-start">
-            <!-- 画像 -->
-            <div class="character-image-wrapper">
-              <img
-                :src="character.image"
-                alt="キャラクター画像"
-                class="character-image"
-              />
-            </div>
-            <div class="ms-3">
-              <table class="table table-sm mb-0">
-                <tbody>
-                  <tr v-if="character.heroName">
-                    <th>ヒーロー名</th>
-                    <td>{{ character.heroName }}</td>
-                  </tr>
-                  <tr v-if="character.villainName">
-                    <th>ヴィラン名</th>
-                    <td>{{ character.villainName }}</td>
-                  </tr>
-                  <tr>
-                    <th>個性</th>
-                    <td>{{ character.ability }}</td>
-                  </tr>
-                  <tr v-if="character.school">
-                    <th>学科</th>
-                    <td>{{ character.school }}</td>
-                  </tr>
-                  <tr v-if="character.formerSchool">
-                    <th>出身校</th>
-                    <td>{{ character.formerSchool }}</td>
-                  </tr>
-                  <tr>
-                    <th>誕生日</th>
-                    <td>{{ character.birthday }}</td>
-                  </tr>
-                  <tr>
-                    <th>身長</th>
-                    <td>{{ character.height }}</td>
-                  </tr>
-                  <tr v-if="character.bloodType">
-                    <th>血液型</th>
-                    <td>{{ character.bloodType }}</td>
-                  </tr>
-                  <tr>
-                    <th>好きなもの</th>
-                    <td>{{ character.likes }}</td>
-                  </tr>
-                  <tr>
-                    <th>性格</th>
-                    <td>{{ character.personality }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div id="app">
+    <TitleWrapper />
+    <CharacterList :sortedCharacters="sortedCharacters" />
   </div>
 </template>
+
+<script>
+import TitleWrapper from './components/TitleWrapper.vue'
+import CharacterList from './components/CharacterList.vue'
+
+export default {
+  name: 'App',
+  components: {
+    TitleWrapper,
+    CharacterList,
+  },
+  data() {
+    return {
+      sortedCharacters: [
+        {
+          rank: 1,
+          name: 'Character A',
+          image: 'imageA.jpg',
+          heroName: 'Hero A',
+          ability: 'Ability A',
+          birthday: '01/01/1990',
+          height: '180cm',
+          likes: 'Likes A',
+          personality: 'Personality A',
+        },
+        // 他のキャラクターデータを追加...
+      ],
+    }
+  }
+}
+</script>
+
+<style>
+/* アプリ全体のスタイル */
+</style>
+
 
 <style>
 /* 既存のスタイルと同じ */
