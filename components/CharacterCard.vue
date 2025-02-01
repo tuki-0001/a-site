@@ -7,7 +7,7 @@
     </div>
     <div class="d-flex align-items-start">
       <div class="character-image-wrapper">
-        <img :src="character.image || require('@/assets/default-image.jpg')" :alt="`${character.name}の画像`" class="character-image" />
+        <img :src="character.image || defaultImage" :alt="`${character.name}の画像`" class="character-image" />
       </div>
       <div class="ms-3">
         <table class="table table-sm mb-0">
@@ -48,7 +48,26 @@
 </template>
 
 <script setup>
-defineProps({
-  character: Object,
+import { defineProps } from 'vue';
+
+const props = defineProps({
+  character: {
+    type: Object,
+    required: true,
+    default: () => ({
+      rank: '',
+      name: '',
+      heroName: '',
+      villainName: '',
+      ability: '',
+      birthday: '',
+      height: '',
+      likes: '',
+      personality: '',
+      image: '',
+    }),
+  },
 });
+
+const defaultImage = require('@/assets/default-image.jpg');
 </script>
