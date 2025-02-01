@@ -1,8 +1,9 @@
 <script setup>
+import { ref } from 'vue';
 import TitleWrapper from '@/components/TitleWrapper.vue';
 import CharacterList from '@/components/CharacterList.vue';
 
-const characters = [
+const characters = ref([
   {
     rank: 1,
     name: "爆豪勝己",
@@ -493,7 +494,7 @@ const characters = [
     personality: "普通に努力家",
     image: "/img/oji.jpg",
   },
-];
+]);
 
 // 順位でソート
 const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
