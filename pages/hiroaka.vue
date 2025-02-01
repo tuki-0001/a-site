@@ -15,7 +15,7 @@ const characters = [
     bloodType: "A型",
     likes: "辛い食べ物全般、登山",
     personality: "暴言自信家",
-    image:"/img./ばくごう.jpg",
+    image:"/img/ばくごう.jpg",
   },
   {
     rank: 8,
@@ -29,7 +29,7 @@ const characters = [
     bloodType: null,
     likes: "蕎麦",
     personality: "つかめない",
-    image: "/img./dabi.jpg",
+    image: "/img/dabi.jpg",
   },
   {
     rank: 2,
@@ -43,7 +43,7 @@ const characters = [
     bloodType: "O型",
     likes: "カツ丼、ヒーロー分析ノート",
     personality: "真面目で努力家",
-    image: "/img./deku.jpg",
+    image: "/img/deku.jpg",
   },
   {
     rank: 3,
@@ -57,7 +57,7 @@ const characters = [
     bloodType: "O型",
     likes: "蕎麦（温かくないやつ）",
     personality: "クール＆ホットな天然",
-    image: "/img./shoto.jpg",
+    image: "/img/shoto.jpg",
   },
   {
     rank: 4,
@@ -71,7 +71,7 @@ const characters = [
     bloodType: "B型",
     likes: "ねこ",
     personality: "なんだかんだあまい",
-    image: "/img./aizawa.jpg",
+    image: "/img/aizawa.jpg",
   },
   {
     rank: 5,
@@ -85,7 +85,7 @@ const characters = [
     bloodType: "O型",
     likes: "硬派な物、肉",
     personality: "快活ムードメーカー",
-    image: "/img./kirishima.jpg",
+    image: "/img/kirishima.jpg",
   },
   {
     rank: 6,
@@ -99,7 +99,7 @@ const characters = [
     bloodType: "AB型",
     likes: "葛餅",
     personality: "頑固オヤジ",
-    image: "/img./enn.jpg",
+    image: "/img/enn.jpg",
   },
   {
     rank: 7,
@@ -113,7 +113,7 @@ const characters = [
     bloodType: "B型",
     likes: "鶏肉",
     personality: "目聡く耳聡い",
-    image: "/img./hokusu.jpg",
+    image: "/img/hokusu.jpg",
   },
   {
     rank: 9,
@@ -127,7 +127,7 @@ const characters = [
     bloodType: null,
     likes: "ゲーム",
     personality: "子ども大人",
-    image: "/img./shigaraki.jpg",
+    image: "/img/shigaraki.jpg",
   },
   {
     rank: 10,
@@ -141,7 +141,7 @@ const characters = [
     bloodType: "A型",
     likes: "フランス料理、バンド・デシネ",
     personality: "身内には優しい",
-    image: "/img./monoma.jpg",
+    image: "/img/monoma.jpg",
   },
   {
     rank: 11,
@@ -155,7 +155,7 @@ const characters = [
     bloodType: "B型",
     likes: "星空、和食",
     personality: "いつも麗らか",
-    image: "/img./urara.jpg",
+    image: "/img/urara.jpg",
   },
   {
     rank: 12,
@@ -169,7 +169,7 @@ const characters = [
     bloodType: "A型",
     likes: "屋久杉・映画",
     personality: "意外とお茶目",
-    image: "/img./oruma.jpg",
+    image: "/img/oruma.jpg",
   },
   {
     rank: 13,
@@ -183,7 +183,7 @@ const characters = [
     bloodType: null,
     likes: "血、柘榴",
     personality: "惚れっぽい",
-    image: "/img./toga.jpg",
+    image: "/img/toga.jpg",
   }, 
   {
     rank: 14,
@@ -197,7 +197,7 @@ const characters = [
     bloodType: "O型",
     likes: "流行ってるもの、ハンバーガー",
     personality: "チャラい系男子",
-    image: "/img./kami.jpg",
+    image: "/img/kami.jpg",
   },
   {
     rank: 15,
@@ -211,7 +211,7 @@ const characters = [
     bloodType: "AB型",
     likes: "猫 、サイクリング",
     personality: "ストイック",
-    image: "/img./mono.jpg",
+    image: "/img/mono.jpg",
   },
   {
     rank: 16,
@@ -225,7 +225,7 @@ const characters = [
     bloodType: "AB型",
     likes: "蝶",
     personality: "ネガティブ能力マン",
-    image: "/img./sann.jpg",
+    image: "/img/sann.jpg",
   },
   {
     rank: 17,
@@ -239,7 +239,7 @@ const characters = [
     bloodType: null,
     likes: null,
     personality:"お調子者",
-    image: "/img./rodhi.jpg",
+    image: "/img/rodhi.jpg",
   },
   {
     rank: 18,
@@ -253,7 +253,7 @@ const characters = [
     bloodType: "A型",
     likes: "勉強、ビーフシチュー",
     personality: "委員長気質",
-    image: "/img./iida.jpg",
+    image: "/img/iida.jpg",
   },
   {
     rank: 19,
@@ -267,7 +267,7 @@ const characters = [
     bloodType: "AB型",
     likes: "リンゴ、薄暗い所",
     personality: "深淵を好むクール系",
-    image: "/img./toko.jpg",
+    image: "/img/toko.jpg",
   },
   {
     rank: 20,
@@ -281,7 +281,7 @@ const characters = [
     bloodType: "A型",
     likes: "ロック",
     personality: "恥ずかしがり屋",
-    image: "/img./iya.jpg",
+    image: "/img/iya.jpg",
   },
   {
     rank: 21,
@@ -295,7 +295,7 @@ const characters = [
     bloodType: "O型",
     likes: "ラーメン、お笑い",
     personality: "太陽的存在",
-    image: "/img./miri.jpg",
+    image: "/img/miri.jpg",
   },
   {
     rank: 22,
@@ -309,7 +309,7 @@ const characters = [
     bloodType: "A型",
     likes: "読書（図鑑などを好む）",
     personality: "たまにポンコツ",
-    image: "/img./yao.jpg",
+    image: "/img/yao.jpg",
   },
   {
     rank: 23,
@@ -323,7 +323,7 @@ const characters = [
     bloodType: "O型",
     likes: "にんじん",
     personality: "男勝り",
-    image: "/img./miru.jpg",
+    image: "/img/miru.jpg",
   },
   {
     rank: 24,
@@ -337,7 +337,7 @@ const characters = [
     bloodType: "B型",
     likes: "健康に良い食べ物",
     personality: "空気読めるマン",
-    image: "/img./sero.jpg",
+    image: "/img/sero.jpg",
   },
   {
     rank: 25,
@@ -351,7 +351,7 @@ const characters = [
     bloodType: "B型",
     likes: "ラジオ、TV",
     personality: "ハイテンション",
-    image: "/img./yamada.jpg",
+    image: "/img/yamada.jpg",
   },
   {
     rank: 26,
@@ -365,7 +365,7 @@ const characters = [
     bloodType: "B型",
     likes: "雨 、ゼリー",
     personality: "友達想いの冷静淑女",
-    image: "/img./asui.jpg",
+    image: "/img/asui.jpg",
   },
   {
     rank: 27,
@@ -379,7 +379,7 @@ const characters = [
     bloodType: "O型",
     likes: "己",
     personality: "ナルシストな自由人",
-    image: "/img./aoyama.jpg",
+    image: "/img/aoyama.jpg",
   },
   {
     rank: 28,
@@ -393,7 +393,7 @@ const characters = [
     bloodType: "B型",
     likes: "たこ焼き、イカスミパスタ",
     personality: "寡黙な紳士",
-    image: "/img./tenn.jpg",
+    image: "/img/tenn.jpg",
   },
   {
     rank: 29,
@@ -407,7 +407,7 @@ const characters = [
     bloodType: "B型",
     likes: "ユリの花、ジャスミンティー",
     personality: "好奇心旺盛",
-    image: "/img./neji.jpg",
+    image: "/img/neji.jpg",
   },
   {
     rank: 30,
@@ -421,7 +421,7 @@ const characters = [
     bloodType: "AB型",
     likes: "狼",
     personality: "何事もビッチリ",
-    image: "/img./besu.jpg",
+    image: "/img/besu.jpg",
   },
   {
     rank: 31,
@@ -435,7 +435,7 @@ const characters = [
     bloodType:"O型",
     likes: "煙草",
     personality: "支離滅裂",
-    image: "/img./twu.jpg",
+    image: "/img/twu.jpg",
   },
   {
     rank: 32,
@@ -449,7 +449,7 @@ const characters = [
     bloodType: null,
     likes: "キレイなもの、かわいいもの",
     personality:"勝気で男勝り",
-    image: "/img./re.jpg",
+    image: "/img/re.jpg",
   },
   {
     rank: 33,
@@ -463,7 +463,7 @@ const characters = [
     bloodType: "AB型",
     likes: "ダンス、納豆、オクラ、恋バナ",
     personality: "元気100%",
-    image: "/img./ashi.jpg",
+    image: "/img/ashi.jpg",
   },
   {
     rank: 34,
@@ -477,7 +477,7 @@ const characters = [
     bloodType:null,
     likes: "カレー",
     personality: "気弱で温厚",
-    image: "/img./hai.jpg",
+    image: "/img/hai.jpg",
   },
   {
     rank: 35,
@@ -491,7 +491,7 @@ const characters = [
     bloodType: "O型",
     likes: "武術",
     personality: "普通に努力家",
-    image: "/img./oji.jpg",
+    image: "/img/oji.jpg",
   },
   {
     rank: 35,
@@ -531,7 +531,7 @@ const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
         <!-- キャラクター情報 -->
         <div class="d-flex p-3">
           <div class="character-image-wrapper">
-            <img src="path/to/image.jpg" alt="Character Image" class="character-image">
+            <img src="/img./imageA.jpg" alt="Character Image" class="character-image">
           </div>
           <div class="ms-3">
             <div class="d-flex align-items-center">
@@ -553,9 +553,6 @@ const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
 </template>
 
 
-<script setup>
-// Vue.jsのコードやコンポーネントのロジックをここに記述
-</script>
 
 <style scoped>
 /* スタイルの内容はそのまま維持 */
