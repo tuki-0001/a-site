@@ -496,14 +496,12 @@ const characters = ref([
   },
 ]);
 if (Array.isArray(characters.value)) {
-  characters.value.sort((a, b) => a.rank - b.rank);
+  characters.value.sort((a, b) => a.rank - b.rank); // ソート処理
 } else {
   console.error('characters is not an array');
 }
 
-
-// 順位でソート
-const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
+const sortedCharacters = characters.value;
 </script>
 
 <template>
