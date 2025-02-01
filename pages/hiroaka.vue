@@ -501,34 +501,31 @@ const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
 </script>
 
 <template>
-  <div id="app">
+  <div id="app" class="container mt-5">
     <!-- タイトルのセクション -->
-    <div class="container">
-      <div class="text-center mb-4">
-        <h1 class="title">My Hero Academia Characters</h1>
-        <p class="subtitle">Character Ranking List</p>
+    <div class="text-center mb-4">
+      <h1 class="display-4 text-warning font-weight-bold">My Hero Academia Characters</h1>
+      <p class="lead text-muted">Character Ranking List</p>
+    </div>
+
+    <!-- キャラクター情報カード -->
+    <div class="card mx-auto" style="max-width: 500px;">
+      <div class="card-header text-center bg-primary text-white">
+        <h2>Character Details</h2>
       </div>
-
-      <!-- 免許証カードのスタイル -->
-      <div class="card mx-auto" style="max-width: 500px;">
-        <div class="card-header text-center bg-primary text-white">
-          <h2>Character Details</h2>
-        </div>
-
+      <div class="card-body d-flex align-items-center">
+        <!-- キャラクター画像 -->
+        <img src="/img/hai.jpg" alt="Character Image" class="rounded-circle" style="width: 120px; height: 120px; object-fit: cover; margin-right: 20px;">
+        
         <!-- キャラクター情報 -->
-        <div class="d-flex p-3">
-          <div class="character-image-wrapper">
-            <img src="/img/hai.jpg" alt="Character Image" class="character-image">
+        <div>
+          <div class="d-flex align-items-center mb-2">
+            <span class="badge bg-warning text-dark" style="font-size: 1.5rem; padding: 10px 20px;">1</span>
+            <h3 class="ms-2">Character Name</h3>
           </div>
-          <div class="ms-3">
-            <div class="d-flex align-items-center">
-              <span class="rank-circle">1</span>
-              <h3>Character Name</h3>
-            </div>
-            <p>Hero Name: Hero</p>
-            <p>Ability: Power</p>
-            <p>Birthday: 01/01/1990</p>
-          </div>
+          <p class="mb-1"><strong>Hero Name:</strong> Hero</p>
+          <p class="mb-1"><strong>Ability:</strong> Power</p>
+          <p class="mb-1"><strong>Birthday:</strong> 01/01/1990</p>
         </div>
       </div>
     </div>
@@ -539,75 +536,11 @@ const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
   </div>
 </template>
 
+<script setup>
+import { ref } from 'vue';
+import TitleWrapper from '@/components/TitleWrapper.vue';
+import CharacterList from '@/components/CharacterList.vue';
 
-
-<style scoped>
-/* スタイルの内容はそのまま維持 */
-
-body {
-  background-color: #f7f7f7;
-}
-
-.card {
-  border-radius: 8px;
-}
-
-.rank-circle {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background-color: gold;
-  color: black;
-  font-weight: bold;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 30px;
-  margin-right: 10px;
-}
-
-.character-image-wrapper {
-  width: 120px;
-  height: 120px;
-  border-radius: 8px;
-  border: 2px solid #007bff;
-  overflow: hidden;
-}
-
-.character-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #f0c674; /* 黄金色 */
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-  font-family: 'Impact', sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.title::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #ff6347, #ffeb3b);
-  z-index: -1;
-  border-radius: 8px;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  color: #b0b0b0;
-  font-family: 'Arial', sans-serif;
-  font-weight: 600;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-</style>
+const sortedCharacters = ref([]);
+</script>
 
