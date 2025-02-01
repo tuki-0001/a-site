@@ -493,20 +493,6 @@ const characters = [
     personality: "普通に努力家",
     image: "/img/oji.jpg",
   },
-  {
-    rank: 35,
-    name: "尾白猿夫",
-    heroName: "武闘ヒーローテイルマン",
-    ability: "尻尾",
-    school:"雄英高校ヒーロー科1年A組",
-    formerSchool:"舞木戸中学校",
-    birthday: "5月28日",
-    height: "169cm",
-    bloodType: "O型",
-    likes: "武術",
-    personality: "普通に努力家",
-    image: "/img./oji.jpg",
-  }, 
 ];
 
 // 順位でソート
@@ -531,7 +517,7 @@ const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
         <!-- キャラクター情報 -->
         <div class="d-flex p-3">
           <div class="character-image-wrapper">
-            <img src="/img/imageA.jpg" alt="Character Image" class="character-image">
+            <img src="/img/hai.jpg" alt="Character Image" class="character-image">
           </div>
           <div class="ms-3">
             <div class="d-flex align-items-center">
