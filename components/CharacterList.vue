@@ -20,9 +20,12 @@
 </template>
 
 <script setup>
-props: {
-  sortedCharacters: Array
-}
+defineProps({
+  sortedCharacters: {
+    type: Array,
+    required: true
+  }
+});
 </script>
 
 <style scoped>
