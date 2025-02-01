@@ -518,6 +518,8 @@ const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
 </template>
 
 <script>
+import TitleWrapper from './TitleWrapper.vue';
+import CharacterList from './CharacterList.vue';
 
 
 export default {
