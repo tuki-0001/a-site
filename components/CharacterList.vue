@@ -10,10 +10,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    sortedCharacters: Array, // 親コンポーネントからデータを受け取る
-  }
-};
+<script setup>
+defineProps({
+  sortedCharacters: Array, // 親コンポーネントからデータを受け取る
+});
 </script>
