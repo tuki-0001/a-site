@@ -495,6 +495,12 @@ const characters = ref([
     image: "/img/oji.jpg",
   },
 ]);
+if (Array.isArray(characters.value)) {
+  characters.value.sort((a, b) => a.rank - b.rank);
+} else {
+  console.error('characters is not an array');
+}
+
 
 // 順位でソート
 const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
