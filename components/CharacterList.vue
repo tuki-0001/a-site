@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import CharacterCard from '@/components/CharacterCard.vue';
 export default {
  name: 'CharacterList',
  components: {
