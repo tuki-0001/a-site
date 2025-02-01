@@ -1,43 +1,69 @@
 <template>
-  <div class="character-list">
-    <div v-for="character in sortedCharacters" :key="character.rank" class="character-item mb-3">
-      <div class="d-flex p-3">
-        <div class="character-image-wrapper">
-          <img :src="character.image" :alt="character.name" class="character-image rounded-circle">
-        </div>
-        <div class="ms-3">
-          <div class="d-flex align-items-center">
-            <span class="badge bg-warning text-dark me-2">{{ character.rank }}</span>
-            <h3>{{ character.name }}</h3>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <div v-if="characters.length > 0">
+          <!-- Sorted characters -->
+          <div v-for="character in sortedCharacters" :key="character.rank" class="card mb-3">
+            <div class="card-body d-flex align-items-center">
+              <!-- Character Image -->
+              <img :src="character.image" :alt="character.name" class="rounded-circle" style="width: 120px; height: 120px; object-fit: cover; margin-right: 20px;">
+              
+              <!-- Character Details -->
+              <div>
+                <div class="d-flex align-items-center mb-2">
+                  <!-- Rank Badge -->
+                  <span class="badge bg-warning text-dark" style="font-size: 1.5rem; padding: 10px 20px;">{{ character.rank }}</span>
+                  <h3 class="ms-2">{{ character.name }}</h3>
+                </div>
+                <p class="mb-1"><strong>Hero Name:</strong> {{ character.heroName }}</p>
+                <p class="mb-1"><strong>Ability:</strong> {{ character.ability }}</p>
+                <p class="mb-1"><strong>Birthday:</strong> {{ character.birthday }}</p>
+              </div>
+            </div>
           </div>
-          <p>Hero Name: {{ character.heroName }}</p>
-          <p>Ability: {{ character.ability }}</p>
-          <p>Birthday: {{ character.birthday }}</p>
+        </div>
+        <!-- No characters available -->
+        <div v-else>
+          <p>No characters available to display.</p>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
-defineProps({
-  sortedCharacters: {
-    type: Array,
-    required: true
-  }
-});
+<script>
+export default {
+  props: {
+    characters: {
+      type: Array,
+      required: true,
+    },
+  },
+  computed: {
+    sortedCharacters() {
+      // ソートされたキャラクターリストを返す
+      return this.characters.sort((a, b) => a.rank - b.rank);
+    },
+  },
+};
 </script>
 
 <style scoped>
-.character-image-wrapper {
-  width: 120px;
-  height: 120px;
-  overflow: hidden;
+.card-body {
+  display: flex;
+  align-items: center;
 }
 
-.character-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.card-body img {
+  margin-right: 20px;
+}
+
+.card-body h3 {
+  margin: 0;
+}
+
+.card-body p {
+  margin: 0.5rem 0;
 }
 </style>
