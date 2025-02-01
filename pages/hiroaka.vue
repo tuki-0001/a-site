@@ -1,4 +1,8 @@
 <script setup>
+import { ref } from 'vue';
+import TitleWrapper from '@/components/TitleWrapper.vue';
+import CharacterList from '@/components/CharacterList.vue';
+
 const characters = [
   {
     rank: 1,
@@ -517,39 +521,6 @@ const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
-import TitleWrapper from '@/components/TitleWrapper.vue';
-import CharacterList from '@/components/CharacterList.vue';
-
-// キャラクターのデータ
-const sortedCharacters = ref([
-  {
-    rank: 1,
-    name: 'Character A',
-    image: 'imageA.jpg',
-    heroName: 'Hero A',
-    villainName: '',
-    ability: 'Ability A',
-    birthday: '01/01/1990',
-    height: '180cm',
-    likes: 'Likes A',
-    personality: 'Personality A',
-  },
-  {
-    rank: 2,
-    name: 'Character B',
-    image: 'imageB.jpg',
-    heroName: '',
-    villainName: 'Villain B',
-    ability: 'Ability B',
-    birthday: '02/02/1991',
-    height: '175cm',
-    likes: 'Likes B',
-    personality: 'Personality B',
-  },
-]);
-</script>
 
 
 <style>
