@@ -64,8 +64,6 @@
 </template>
 
 <script>
-import CharacterCard from './CharacterCard';
-
 export default {
  name: 'CharacterCard',
  props: {
