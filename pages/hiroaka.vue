@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue';
 import TitleWrapper from '@/components/TitleWrapper.vue';
 import CharacterList from '@/components/CharacterList.vue';
 
