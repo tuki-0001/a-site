@@ -12,6 +12,9 @@
 import CharacterCard from '@/components/CharacterCard.vue';
 
 defineProps({
-  sortedCharacters: Array,
+  sortedCharacters: {
+    type: Array,
+    required: true
+  },
 });
 </script>
