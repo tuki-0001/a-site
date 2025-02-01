@@ -531,7 +531,7 @@ const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
         <!-- キャラクター情報 -->
         <div class="d-flex p-3">
           <div class="character-image-wrapper">
-            <img src="/img./imageA.jpg" alt="Character Image" class="character-image">
+            <img src="/img/imageA.jpg" alt="Character Image" class="character-image">
           </div>
           <div class="ms-3">
             <div class="d-flex align-items-center">
