@@ -515,41 +515,59 @@ const sortedCharacters = characters.sort((a, b) => a.rank - b.rank);
 
 <template>
   <div id="app">
+    <!-- タイトルのセクション -->
+    <div class="container">
+      <div class="text-center mb-4">
+        <h1 class="title">My Hero Academia Characters</h1>
+        <p class="subtitle">Character Ranking List</p>
+      </div>
+
+      <!-- 免許証カードのスタイル -->
+      <div class="card mx-auto" style="max-width: 500px;">
+        <div class="card-header text-center bg-primary text-white">
+          <h2>Character Details</h2>
+        </div>
+
+        <!-- キャラクター情報 -->
+        <div class="d-flex p-3">
+          <div class="character-image-wrapper">
+            <img src="path/to/image.jpg" alt="Character Image" class="character-image">
+          </div>
+          <div class="ms-3">
+            <div class="d-flex align-items-center">
+              <span class="rank-circle">1</span>
+              <h3>Character Name</h3>
+            </div>
+            <p>Hero Name: Hero</p>
+            <p>Ability: Power</p>
+            <p>Birthday: 01/01/1990</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TitleWrapper と CharacterList コンポーネントをここで追加 -->
     <TitleWrapper />
     <CharacterList :sortedCharacters="sortedCharacters" />
   </div>
 </template>
 
 
+<script setup>
+// Vue.jsのコードやコンポーネントのロジックをここに記述
+</script>
 
-<style>
-/* アプリ全体のスタイル */
-</style>
+<style scoped>
+/* スタイルの内容はそのまま維持 */
 
-
-<style>
-/* ブートストラップを使って簡略化 */
 body {
-  background-color: #f7f7f7; /* ブートストラップの背景色クラスで代替できますが、維持 */
+  background-color: #f7f7f7;
 }
 
-/* 免許証のカード */
-.license-card {
-  max-width: 500px;
-  border: 2px solid #007bff;
+.card {
   border-radius: 8px;
-  background-color: #fff;
 }
 
-/* ヘッダー部分 */
-.license-header {
-  background-color: #007bff;
-  color: white;
-  padding: 10px;
-  border-radius: 4px;
-}
-
-/* ランクの丸のスタイル */
 .rank-circle {
   display: inline-block;
   width: 30px;
@@ -563,7 +581,6 @@ body {
   margin-right: 10px;
 }
 
-/* キャラクターの画像のスタイル */
 .character-image-wrapper {
   width: 120px;
   height: 120px;
@@ -578,11 +595,6 @@ body {
   object-fit: cover;
 }
 
-/* タイトルのスタイル */
-.title-wrapper {
-  margin-bottom: 40px;
-}
-
 .title {
   font-size: 3rem;
   font-weight: bold;
@@ -594,7 +606,6 @@ body {
   position: relative;
 }
 
-/* タイトルのグラデーションと影の効果 */
 .title::before {
   content: '';
   position: absolute;
@@ -616,34 +627,3 @@ body {
 }
 </style>
 
-<!-- ブートストラップを使ってレイアウト -->
-<div class="container">
-  <!-- タイトルのセクション -->
-  <div class="title-wrapper text-center mb-4">
-    <h1 class="title">My Hero Academia Characters</h1>
-    <p class="subtitle">Character Ranking List</p>
-  </div>
-
-  <!-- 免許証カードのスタイル -->
-  <div class="license-card mx-auto">
-    <div class="license-header text-center">
-      <h2>Character Details</h2>
-    </div>
-
-    <!-- キャラクター情報 -->
-    <div class="d-flex align-items-center p-3">
-      <div class="character-image-wrapper">
-        <img src="path/to/image.jpg" alt="Character Image" class="character-image">
-      </div>
-      <div class="ms-3">
-        <div class="d-flex align-items-center">
-          <span class="rank-circle">1</span>
-          <h3>Character Name</h3>
-        </div>
-        <p>Hero Name: Hero</p>
-        <p>Ability: Power</p>
-        <p>Birthday: 01/01/1990</p>
-      </div>
-    </div>
-  </div>
-</div>
