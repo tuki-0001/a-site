@@ -1,25 +1,17 @@
 <template>
- <div class="container mt-5">
-   <div class="row">
-     <CharacterCard
-       v-for="character in sortedCharacters"
-       :key="character.rank"
-       :character="character"
-     />
-   </div>
- </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 mb-4" v-for="character in sortedCharacters" :key="character.rank">
+        <CharacterCard :character="character" />
+      </div>
+    </div>
+  </div>
 </template>
 
-<script>
+<script setup>
 import CharacterCard from '@/components/CharacterCard.vue';
-export default {
- name: 'CharacterList',
- components: {
-   CharacterCard,
- },
- props: {
-   sortedCharacters: Array,
- },
-}
-</script>
 
+defineProps({
+  sortedCharacters: Array,
+});
+</script>
