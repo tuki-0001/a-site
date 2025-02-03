@@ -69,5 +69,5 @@ const props = defineProps({
   },
 });
 
-const defaultImage = require('@/assets/default-image.jpg');
+const defaultImage = '/img/default-image.jpg';
 </script>

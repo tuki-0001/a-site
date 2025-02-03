@@ -1,14 +1,21 @@
 <template>
   <div>
     <TitleWrapper :title="title" />
-    <CharacterList :characters="sortedCharacters" />
+    <div class="character-list">
+      <CharacterCard
+        v-for="character in sortedCharacters"
+        :key="character.rank"
+        :character="character"  
+      />
+    </div>
   </div>
 </template>
+
 
 <script setup>
 import { computed } from 'vue';
 import TitleWrapper from '@/components/TitleWrapper.vue';
-import CharacterList from '@/components/CharacterList.vue';
+import CharacterCard from '@/components/CharacterCard.vue';
 
 const title = 'Character Ranking';
 
