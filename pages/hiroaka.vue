@@ -3,6 +3,12 @@
     <!-- タイトル部分 -->
     <TitleWrapper :title="title" />
 
+    <!-- 並べ替えのボタン -->
+    <div class="mb-4">
+      <button @click="changeSort('rank')" class="btn btn-primary">ランク順</button>
+      <button @click="changeSort('birthday')" class="btn btn-secondary">誕生日順</button>
+    </div>
+
     <!-- キャラクターリスト -->
     <div class="row">
       <CharacterCard
@@ -16,12 +22,14 @@
 </template>
 
 
+
 <script setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import TitleWrapper from '@/components/TitleWrapper.vue';
 import CharacterCard from '@/components/CharacterCard.vue';
 
-const title = 'Character Ranking';
+const title = ref('Character Ranking');
+
 
 const characters = [
 {
@@ -516,7 +524,18 @@ const characters = [
   },
 ];
 
+const sortType = ref('rank');
+
 const sortedCharacters = computed(() => {
-  return [...characters].sort((a, b) => a.rank - b.rank);
+  if (sortType.value === 'birthday') {
+    return [...characters].sort((a, b) => new Date(a.birthday) - new Date(b.birthday)); // 誕生日順
+  }
+  return [...characters].sort((a, b) => a.rank - b.rank); // ランク順
 });
+
+// 並べ替えの変更
+const changeSort = (type) => {
+  sortType.value = type;
+  title.value = type === 'rank' ? 'Character Ranking' : 'Birthday Ranking';
+};
 </script>
