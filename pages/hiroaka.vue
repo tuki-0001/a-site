@@ -524,8 +524,7 @@ const characters = [
   },
 ];
 
-const sortType = ref('rank');
-
+// 並べ替え後のキャラクターリスト
 const sortedCharacters = computed(() => {
   if (sortType.value === 'birthday') {
     return [...characters].sort((a, b) => new Date(a.birthday) - new Date(b.birthday)); // 誕生日順
