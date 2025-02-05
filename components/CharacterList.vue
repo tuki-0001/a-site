@@ -11,7 +11,6 @@
 
 <script setup>
 import CharacterCard from '@/components/CharacterCard.vue';
-import { computed } from 'vue';
 
 // 親から渡されたキャラクターリストを受け取る
 const props = defineProps({
