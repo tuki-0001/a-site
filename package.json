@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "knitwork": "^1.2.0",
     "sass": "1.77.6",
     "usebootstrap": "^3.5.83",
