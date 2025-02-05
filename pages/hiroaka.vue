@@ -1,11 +1,15 @@
 <template>
-  <div>
+  <div class="container mt-4">
+    <!-- タイトル部分 -->
     <TitleWrapper :title="title" />
-    <div class="character-list">
+
+    <!-- キャラクターリスト -->
+    <div class="row">
       <CharacterCard
         v-for="character in sortedCharacters"
         :key="character.rank"
         :character="character"  
+        class="col-md-4 mb-4"
       />
     </div>
   </div>

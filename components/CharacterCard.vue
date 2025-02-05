@@ -1,58 +1,23 @@
 <template>
-  <div class="container my-5">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-      <div class="col">
-        <div class="license-card mx-auto p-4 shadow-lg rounded-3">
-          <div class="license-header text-center mb-3">
-            <h2 class="h5 mb-0">
-              <span class="rank-circle">{{ character.rank }}</span> {{ character.name }}
-            </h2>
-          </div>
-          <div class="d-flex align-items-start">
-            <div class="character-image-wrapper text-center mb-3">
-              <img :src="character.image || defaultImage" :alt="`${character.name}の画像`" class="img-fluid rounded-circle" style="width: 120px; height: 120px;" />
-            </div>
-            <div class="ms-3">
-              <table class="table table-sm table-borderless mb-0">
-                <tbody>
-                  <tr v-if="character.heroName">
-                    <th>ヒーロー名</th>
-                    <td>{{ character.heroName }}</td>
-                  </tr>
-                  <tr v-if="character.villainName">
-                    <th>ヴィラン名</th>
-                    <td>{{ character.villainName }}</td>
-                  </tr>
-                  <tr v-if="character.ability">
-                    <th>個性</th>
-                    <td>{{ character.ability }}</td>
-                  </tr>
-                  <tr v-if="character.birthday">
-                    <th>誕生日</th>
-                    <td>{{ character.birthday }}</td>
-                  </tr>
-                  <tr v-if="character.height">
-                    <th>身長</th>
-                    <td>{{ character.height }}</td>
-                  </tr>
-                  <tr v-if="character.likes">
-                    <th>好きなもの</th>
-                    <td>{{ character.likes }}</td>
-                  </tr>
-                  <tr v-if="character.personality">
-                    <th>性格</th>
-                    <td>{{ character.personality }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+  <div class="card mb-4" style="max-width: 540px;">
+    <div class="row g-0">
+      <!-- キャラクター画像 -->
+      <div class="col-md-4">
+        <img :src="getImageUrl(character.image)" :alt="character.name" class="img-fluid rounded-start" style="object-fit: cover; height: 120px;">
       </div>
-      <!-- 他のキャラクターカードも同様に追加 -->
-      <div class="col">
-        <div class="license-card mx-auto p-4 shadow-lg rounded-3">
-          <!-- 2番目のキャラクターカードの内容もここに -->
+      <div class="col-md-8">
+        <div class="card-body">
+          <!-- キャラクターの名前 -->
+          <h5 class="card-title">{{ character.name }}</h5>
+          <p class="card-text"><strong>Hero Name:</strong> {{ character.heroName }}</p>
+          <p class="card-text"><strong>Ability:</strong> {{ character.ability }}</p>
+          <p class="card-text"><strong>Birthday:</strong> {{ character.birthday }}</p>
+          <p class="card-text"><strong>School:</strong> {{ character.school }}</p>
+          <p class="card-text"><strong>Former School:</strong> {{ character.formerSchool }}</p>
+          <p class="card-text"><strong>Height:</strong> {{ character.height }}</p>
+          <p class="card-text"><strong>Blood Type:</strong> {{ character.bloodType }}</p>
+          <p class="card-text"><strong>Likes:</strong> {{ character.likes }}</p>
+          <p class="card-text"><strong>Personality:</strong> {{ character.personality }}</p>
         </div>
       </div>
     </div>
@@ -66,20 +31,11 @@ const props = defineProps({
   character: {
     type: Object,
     required: true,
-    default: () => ({
-      rank: "",
-      name: "",
-      heroName: "",
-      villainName: "",
-      ability: "",
-      birthday: "",
-      height: "",
-      likes: "",
-      personality: "",
-      image: "",
-    }),
   },
 });
 
-const defaultImage = '/img/default-image.jpg';
+const getImageUrl = (image) => {
+  // public/img フォルダ内の画像パスを直接返す
+  return image ? `/img/${image}` : '/img/default-image.jpg'; // 画像が指定されていない場合はデフォルト画像を表示
+};
 </script>
