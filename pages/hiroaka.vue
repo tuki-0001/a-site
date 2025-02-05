@@ -29,6 +29,7 @@ import TitleWrapper from '@/components/TitleWrapper.vue';
 import CharacterCard from '@/components/CharacterCard.vue';
 
 const title = ref('Character Ranking');
+const sortType = ref('rank');
 
 
 const characters = [
