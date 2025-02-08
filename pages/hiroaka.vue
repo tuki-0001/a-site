@@ -9,10 +9,9 @@
       <CharacterCard
         v-for="character in sortedCharacters"
         :key="character.rank"
-        :character="character"
-        :show-details="selectedCharacter && selectedCharacter.rank === character.rank"
-        @click="selectCharacter(character)"  
+        :character="character"  
         class="col-md-4 mb-4"
+        @click="selectCharacter(character)"  
       />
     </div>
     <div v-if="selectedCharacter" class="mt-4">
@@ -532,12 +531,5 @@ const characters = [
 const sortedCharacters = computed(() => {
   return [...characters].sort((a, b) => a.rank - b.rank); // ランク順
 });
-const selectCharacter = (character) => {
-  // 既に選択されたキャラクターがクリックされた場合、非表示にする
-  if (selectedCharacter.value === character) {
-    selectedCharacter.value = null; // 解除
-  } else {
-    selectedCharacter.value = character; // 新たに選択
-  }
-};
+
 </script>
