@@ -1,5 +1,5 @@
 <template>
-  <div class="card mb-4" style="max-width: 540px;" v-for="(character, index) in characters" :key="index">
+  <div v-for="(character, index) in characters" :key="index" class="card mb-4" style="max-width: 540px;">
     <div class="row g-0">
       <!-- キャラクター画像 -->
       <div class="col-6 col-md-6" @click="toggleDetails(index)">
@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 
 // 親コンポーネントから渡される characters 配列を受け取る
 const props = defineProps({
@@ -51,12 +51,16 @@ const props = defineProps({
   },
 });
 
-// 各キャラクターの詳細情報を表示するための状態を配列で管理
-const showDetails = ref(Array(props.characters.length).fill(false));
+// 初期化時に showDetails 配列を characters の長さに基づいて作成
+const showDetails = ref([]);
+
+// characters 配列の変化に応じて showDetails を更新
+watch(() => props.characters, (newCharacters) => {
+  showDetails.value = newCharacters.map(() => false);
+}, { immediate: true });
 
 // 画像クリックでプロフィール情報を表示
 const toggleDetails = (index) => {
-  // クリックされたカードの詳細情報をトグル
   showDetails.value[index] = !showDetails.value[index];
 };
 
