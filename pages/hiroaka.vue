@@ -3,17 +3,21 @@
     <!-- タイトル部分 -->
     <TitleWrapper :title="pageTitle" :subtitle="pageSubtitle" />
 
-
     <!-- キャラクターリスト -->
     <div class="row">
-      <CharacterCard
-        v-for="character in sortedCharacters"
-        :key="character.rank"
-        :character="character"  
-        class="col-md-4 mb-4"
-        @click="selectCharacter(character)"  
-      />
+      <div class="card-deck">
+        <Card 
+          v-for="(character, index) in sortedCharacters" 
+          :key="character.rank" 
+          :character="character" 
+          :is-open="openIndex === index" 
+          @toggle="toggleCard(index)" 
+          class="col-md-4 mb-4"
+        />
+      </div>
     </div>
+
+    <!-- 選択したキャラクター -->
     <div v-if="selectedCharacter" class="mt-4">
       <TitleWrapper :title="'Selected Character: ' + selectedCharacter.name" />
       <CharacterCard :character="selectedCharacter" />
@@ -21,18 +25,16 @@
   </div>
 </template>
 
-
-
 <script setup>
 import { computed, ref } from 'vue';
 import TitleWrapper from '@/components/TitleWrapper.vue';
 import CharacterCard from '@/components/CharacterCard.vue';
+import Card from '@/components/Card.vue'; // 新しいCardコンポーネントをインポート
 
 const pageTitle = ref('僕のヒーローアカデミア キャラランキング');
 const pageSubtitle = ref('魅力的なキャラたち、ここに集結！');
-
-
 const selectedCharacter = ref(null);
+
 
 
 const characters = [
@@ -531,5 +533,13 @@ const characters = [
 const sortedCharacters = computed(() => {
   return [...characters].sort((a, b) => a.rank - b.rank); // ランク順
 });
+const openIndex = ref(null);
 
+const toggleCard = (index) => {
+  openIndex.value = openIndex.value === index ? null : index;
+};
+
+const selectCharacter = (character) => {
+  selectedCharacter.value = character;
+};
 </script>
