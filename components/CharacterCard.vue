@@ -1,8 +1,8 @@
 <template>
-  <div class="card mb-4" style="max-width: 540px;">
+  <div class="card mb-4" style="max-width: 540px;" v-for="(character, index) in characters" :key="index">
     <div class="row g-0">
       <!-- キャラクター画像 -->
-      <div class="col-6 col-md-6" @click="showProfile">
+      <div class="col-6 col-md-6" @click="toggleDetails(index)">
         <img 
           :src="getImageUrl(character.image)" 
           :alt="character.name" 
@@ -20,20 +20,20 @@
           <h5 class="card-title">{{ character.name }}</h5>
 
           <!-- ヒーローかヴィランかで表示内容を変更 -->
-          <p v-if="showDetails && character.heroName !== '-'" class="card-text">
+          <p v-if="showDetails[index] && character.heroName !== '-'" class="card-text">
            <strong>{{ character.heroName ? 'ヒーロー名' : 'ヴィラン名' }}:</strong>
             {{ character.heroName || character.villainName }}
           </p>
 
           <!-- 詳細情報、showDetailsがtrueの場合のみ表示 -->
-          <p v-if="showDetails && character.ability !== '-' " class="card-text"><strong>能力:</strong> {{ character.ability }}</p>
-          <p v-if="showDetails && character.birthday !== '-' " class="card-text"><strong>誕生日:</strong> {{ character.birthday }}</p>
-          <p v-if="showDetails && character.school !== '-' " class="card-text"><strong>学校:</strong> {{ character.school }}</p>
-          <p v-if="showDetails && character.formerSchool !== '-' " class="card-text"><strong>前の学校:</strong> {{ character.formerSchool }}</p>
-          <p v-if="showDetails && character.height !== '-' " class="card-text"><strong>身長:</strong> {{ character.height }}</p>
-          <p v-if="showDetails && character.bloodType !== '-' " class="card-text"><strong>血液型:</strong> {{ character.bloodType }}</p>
-          <p v-if="showDetails && character.likes !== '-' " class="card-text"><strong>好きなもの:</strong> {{ character.likes }}</p>
-          <p v-if="showDetails && character.personality !== '-' " class="card-text"><strong>性格:</strong> {{ character.personality }}</p>
+          <p v-if="showDetails[index] && character.ability !== '-' " class="card-text"><strong>能力:</strong> {{ character.ability }}</p>
+          <p v-if="showDetails[index] && character.birthday !== '-' " class="card-text"><strong>誕生日:</strong> {{ character.birthday }}</p>
+          <p v-if="showDetails[index] && character.school !== '-' " class="card-text"><strong>学校:</strong> {{ character.school }}</p>
+          <p v-if="showDetails[index] && character.formerSchool !== '-' " class="card-text"><strong>前の学校:</strong> {{ character.formerSchool }}</p>
+          <p v-if="showDetails[index] && character.height !== '-' " class="card-text"><strong>身長:</strong> {{ character.height }}</p>
+          <p v-if="showDetails[index] && character.bloodType !== '-' " class="card-text"><strong>血液型:</strong> {{ character.bloodType }}</p>
+          <p v-if="showDetails[index] && character.likes !== '-' " class="card-text"><strong>好きなもの:</strong> {{ character.likes }}</p>
+          <p v-if="showDetails[index] && character.personality !== '-' " class="card-text"><strong>性格:</strong> {{ character.personality }}</p>
         </div>
       </div>
     </div>
@@ -43,20 +43,21 @@
 <script setup>
 import { ref } from 'vue';
 
-// 親コンポーネントから渡される character オブジェクトを受け取る
+// 親コンポーネントから渡される characters 配列を受け取る
 const props = defineProps({
-  character: {
-    type: Object,
+  characters: {
+    type: Array,
     required: true,
   },
 });
 
-// プロフィール情報を表示するための状態
-const showDetails = ref(false);
+// 各キャラクターの詳細情報を表示するための状態を配列で管理
+const showDetails = ref(Array(props.characters.length).fill(false));
 
 // 画像クリックでプロフィール情報を表示
-const showProfile = () => {
-  showDetails.value = !showDetails.value;
+const toggleDetails = (index) => {
+  // クリックされたカードの詳細情報をトグル
+  showDetails.value[index] = !showDetails.value[index];
 };
 
 // 画像パスを取得する関数
