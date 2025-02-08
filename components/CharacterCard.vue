@@ -35,7 +35,6 @@ const props = defineProps({
 });
 
 const getImageUrl = (image) => {
-  // public/img フォルダ内の画像パスを直接返す
-  return image ? `/img/${image}` : '/img/default-image.jpg'; // 画像が指定されていない場合はデフォルト画像を表示
+  return image ? `/${image}` : '/img/default-image.jpg';
 };
 </script>
