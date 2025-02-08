@@ -51,12 +51,12 @@ const props = defineProps({
   },
 });
 
-// showDetails 配列を作成する前に characters が存在するかチェック
-const showDetails = ref([]);
+// showDetails 配列の初期化
+const showDetails = ref(props.characters.map(() => false));  // 初期状態でfalseを設定
 
 // characters 配列の変化に応じて showDetails を更新
 watch(() => props.characters, (newCharacters) => {
-  // characters が定義されている場合のみ処理
+  // characters が更新されるたびに showDetails を再初期化
   if (Array.isArray(newCharacters)) {
     showDetails.value = newCharacters.map(() => false); // 詳細表示状態を false で初期化
   }
