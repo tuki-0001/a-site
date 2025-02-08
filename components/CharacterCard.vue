@@ -19,7 +19,8 @@
           <!-- ランキング表示 -->
           <div class="d-flex justify-content-between align-items-center mb-3">
             <h6 class="card-subtitle text-muted" style="font-size: 1.2rem;">Rank:</h6>
-            <div class="badge bg-primary" style="font-size: 1.5rem; font-weight: bold; padding: 10px 20px; border-radius: 12px;">
+            <!-- ランクバッジ -->
+            <div :class="['badge', getRankClass(character.rank), 'fs-4', 'fw-bold', 'px-4', 'py-2']">
               {{ character.rank }}
             </div>
           </div>
@@ -87,6 +88,14 @@ const onMouseOver = () => {
 // マウスが画像から離れた時の処理
 const onMouseLeave = () => {
   showZoomEffect.value = false;
+};
+
+// ランクのクラスを動的に設定
+const getRankClass = (rank) => {
+  if (rank === '1') return 'bg-warning text-dark';  // ゴールド
+  if (rank === '2') return 'bg-secondary text-dark';  // シルバー
+  if (rank === '3') return 'bg-bronze text-dark';  // ブロンズ
+  return 'bg-primary text-white';  // その他
 };
 </script>
 
