@@ -28,8 +28,8 @@ import { computed, ref } from 'vue';
 import TitleWrapper from '@/components/TitleWrapper.vue';
 import CharacterCard from '@/components/CharacterCard.vue';
 
-const pageTitle = ref('Character Ranking');
-const pageSubtitle = ref('List of characters sorted by rank');
+const pageTitle = ref('');
+const pageSubtitle = ref('');
 
 
 const selectedCharacter = ref(null);
