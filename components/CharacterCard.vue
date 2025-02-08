@@ -1,8 +1,8 @@
 <template>
-  <div class="card mb-4" style="max-width: 540px;">
+  <div class="card mb-4" style="max-width: 540px; margin: 0 auto;">
     <div class="row g-0">
       <!-- キャラクター画像 -->
-      <div class="col-6 col-md-6" @click="showProfile">
+      <div class="col-12" @click="showProfile">
         <img 
           :src="getImageUrl(character.image)" 
           :alt="character.name" 
@@ -11,7 +11,7 @@
         />
       </div>
 
-      <div class="col-6 col-md-6">
+      <div class="col-12">
         <div class="card-body" style="max-height: 500px; overflow-y: auto;">
           <!-- ランク表示 -->
           <h6 class="card-subtitle mb-2 text-muted">Rank: {{ character.rank }}</h6>

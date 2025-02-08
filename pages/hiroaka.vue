@@ -10,7 +10,7 @@
         v-for="character in sortedCharacters"
         :key="character.rank"
         :character="character"  
-        class="col-md-4 mb-4"
+        class="col-12 mb-4"
         @click="selectCharacter(character)"  
       />
     </div>
