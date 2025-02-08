@@ -6,15 +6,23 @@
         <img 
           :src="getImageUrl(character.image)" 
           :alt="character.name" 
-          class="img-fluid" 
+          class="img-fluid rounded-start"
+          :class="{'zoom-effect': showZoomEffect}"
+          @mouseover="onMouseOver"
+          @mouseleave="onMouseLeave"
           style="object-fit: cover; height: 200px; width: 100%;" 
         />
       </div>
 
       <div class="col-12">
         <div class="card-body" style="padding: 20px; max-height: 500px; overflow-y: auto;">
-          <!-- ランク表示 -->
-          <h6 class="card-subtitle mb-2 text-muted" style="font-size: 1rem;">Rank: {{ character.rank }}</h6>
+          <!-- ランキング表示 -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="card-subtitle text-muted" style="font-size: 1.2rem;">Rank:</h6>
+            <div class="badge bg-primary" style="font-size: 1.5rem; font-weight: bold; padding: 10px 20px; border-radius: 12px;">
+              {{ character.rank }}
+            </div>
+          </div>
           
           <!-- キャラクターの名前 -->
           <h5 class="card-title" style="font-size: 1.4rem; font-weight: bold;">{{ character.name }}</h5>
@@ -67,5 +75,24 @@ const getImageUrl = (image) => {
     return '/img/default-image.jpg';
   }
 };
+
+// ズームエフェクトを管理する状態
+const showZoomEffect = ref(false);
+
+// マウスが画像に入った時の処理
+const onMouseOver = () => {
+  showZoomEffect.value = true;
+};
+
+// マウスが画像から離れた時の処理
+const onMouseLeave = () => {
+  showZoomEffect.value = false;
+};
 </script>
 
+<style scoped>
+.zoom-effect {
+  transform: scale(1.1);  /* 画像を10%拡大 */
+  transition: transform 0.3s ease-in-out; /* 画像のズームにスムーズな遷移 */
+}
+</style>
