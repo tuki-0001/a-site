@@ -2,16 +2,16 @@
   <div class="card mb-4" style="max-width: 540px;">
     <div class="row g-0">
       <!-- キャラクター画像 -->
-      <div class="col-md-4" @click="showProfile">
+      <div class="col-6 col-md-6" @click="showProfile">
         <img 
           :src="getImageUrl(character.image)" 
           :alt="character.name" 
           class="img-fluid rounded-start" 
-          style="object-fit: cover; height: 120px;" 
+          style="object-fit: cover; height: 120px; width: 100%;" 
         />
       </div>
 
-      <div class="col-md-8">
+      <div class="col-6 col-md-6">
         <div class="card-body">
           <!-- ランク表示 -->
           <h6 class="card-subtitle mb-2 text-muted">Rank: {{ character.rank }}</h6>
@@ -20,7 +20,7 @@
           <h5 class="card-title">{{ character.name }}</h5>
 
           <!-- ヒーローかヴィランかで表示内容を変更 -->
-          <p v-if="showDetails&& character.heroName !== '-'" class="card-text">
+          <p v-if="showDetails && character.heroName !== '-'" class="card-text">
            <strong>{{ character.heroName ? 'ヒーロー名' : 'ヴィラン名' }}:</strong>
             {{ character.heroName || character.villainName }}
           </p>
