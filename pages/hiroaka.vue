@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-4">
     <!-- タイトル部分 -->
-    <TitleWrapper :title="title" />
+    <TitleWrapper :title="pageTitle" :subtitle="pageSubtitle" />
 
 
     <!-- キャラクターリスト -->
