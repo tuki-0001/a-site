@@ -1,7 +1,7 @@
 <template>
-  <div class="text-center mb-5" style="padding: 100px 0;">
-    <h2 class="display-4 text-primary font-weight-bold animated fadeInUp">{{ title }}</h2>
-    <p class="lead text-secondary animated fadeInUp" style="font-size: 1.3rem; animation-delay: 0.3s;">{{ subtitle }}</p>
+  <div class="text-center mb-5" style="background: url('/img/hero-background.jpg') no-repeat center center; background-size: cover; background-attachment: fixed; padding: 80px 0; color: white; border-radius: 15px;">
+    <h2 class="display-4 font-weight-bold" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">{{ title }}</h2>
+    <p class="lead" style="font-size: 1.3rem; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);">{{ subtitle }}</p>
   </div>
 </template>
 
@@ -17,21 +17,3 @@ defineProps({
   },
 });
 </script>
-
-<style scoped>
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animated {
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
-</style>
