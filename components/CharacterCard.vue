@@ -20,7 +20,7 @@
           <div class="d-flex justify-content-between align-items-center mb-3">
             <h6 class="card-subtitle text-muted" style="font-size: 1.2rem;">Rank:</h6>
             <!-- ランクバッジ -->
-            <div :class="['badge', getRankClass(character.rank), 'fs-4', 'fw-bold', 'px-4', 'py-2']">
+            <div :class="['badge', getRankClass(character.rank), 'fs-4', 'fw-bold', 'px-4', 'py-2', 'rounded-pill', 'text-light', 'shadow-lg', 'border-0']">
               {{ character.rank }}
             </div>
           </div>
@@ -92,9 +92,9 @@ const onMouseLeave = () => {
 
 // ランクのクラスを動的に設定
 const getRankClass = (rank) => {
-  if (rank === '1') return 'bg-warning text-dark';  // ゴールド
-  if (rank === '2') return 'bg-secondary text-dark';  // シルバー
-  if (rank === '3') return 'bg-bronze text-dark';  // ブロンズ
+  if (rank === '1') return 'bg-warning text-dark border-warning';  // ゴールド
+  if (rank === '2') return 'bg-secondary text-dark border-secondary';  // シルバー
+  if (rank === '3') return 'bg-bronze text-dark border-bronze';  // ブロンズ
   return 'bg-primary text-white';  // その他
 };
 </script>
@@ -103,5 +103,23 @@ const getRankClass = (rank) => {
 .zoom-effect {
   transform: scale(1.1);  /* 画像を10%拡大 */
   transition: transform 0.3s ease-in-out; /* 画像のズームにスムーズな遷移 */
+}
+
+/* ブロンズの色をカスタマイズ */
+.bg-bronze {
+  background-color: #cd7f32 !important;
+  border-color: #cd7f32 !important;
+}
+
+/* ゴールドの色をカスタマイズ */
+.bg-warning {
+  background-color: #ffd700 !important;
+  border-color: #ffd700 !important;
+}
+
+/* シルバーの色をカスタマイズ */
+.bg-secondary {
+  background-color: #c0c0c0 !important;
+  border-color: #c0c0c0 !important;
 }
 </style>
