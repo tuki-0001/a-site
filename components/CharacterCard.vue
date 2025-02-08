@@ -20,20 +20,20 @@
           <h5 class="card-title">{{ character.name }}</h5>
 
           <!-- ヒーローかヴィランかで表示内容を変更 -->
-          <p class="card-text">
-            <strong>{{ character.heroName ? 'ヒーロー名' : 'ヴィラン名' }}:</strong>
+          <p v-if="showDetails" class="card-text">
+           <strong>{{ character.heroName ? 'ヒーロー名' : 'ヴィラン名' }}:</strong>
             {{ character.heroName || character.villainName }}
           </p>
 
-          <!-- 詳細情報 -->
-          <p class="card-text" v-if="showDetails && character.ability !== '-'"><strong>能力:</strong> {{ character.ability }}</p>
-          <p class="card-text" v-if="showDetails && character.birthday !== '-'"><strong>誕生日:</strong> {{ character.birthday }}</p>
-          <p class="card-text" v-if="showDetails && character.school !== '-'"><strong>学校:</strong> {{ character.school }}</p>
-          <p class="card-text" v-if="showDetails && character.formerSchool !== '-'"><strong>前の学校:</strong> {{ character.formerSchool }}</p>
-          <p class="card-text" v-if="showDetails && character.height !== '-'"><strong>身長:</strong> {{ character.height }}</p>
-          <p class="card-text" v-if="showDetails && character.bloodType !== '-'"><strong>血液型:</strong> {{ character.bloodType }}</p>
-          <p class="card-text" v-if="showDetails && character.likes !== '-'"><strong>好きなもの:</strong> {{ character.likes }}</p>
-          <p class="card-text" v-if="showDetails && character.personality !== '-'"><strong>性格:</strong> {{ character.personality }}</p>
+          <!-- 詳細情報、showDetailsがtrueの場合のみ表示 -->
+          <p v-if="showDetails && character.ability !== '-' " class="card-text"><strong>能力:</strong> {{ character.ability }}</p>
+          <p v-if="showDetails && character.birthday !== '-' " class="card-text"><strong>誕生日:</strong> {{ character.birthday }}</p>
+          <p v-if="showDetails && character.school !== '-' " class="card-text"><strong>学校:</strong> {{ character.school }}</p>
+          <p v-if="showDetails && character.formerSchool !== '-' " class="card-text"><strong>前の学校:</strong> {{ character.formerSchool }}</p>
+          <p v-if="showDetails && character.height !== '-' " class="card-text"><strong>身長:</strong> {{ character.height }}</p>
+          <p v-if="showDetails && character.bloodType !== '-' " class="card-text"><strong>血液型:</strong> {{ character.bloodType }}</p>
+          <p v-if="showDetails && character.likes !== '-' " class="card-text"><strong>好きなもの:</strong> {{ character.likes }}</p>
+          <p v-if="showDetails && character.personality !== '-' " class="card-text"><strong>性格:</strong> {{ character.personality }}</p>
         </div>
       </div>
     </div>
