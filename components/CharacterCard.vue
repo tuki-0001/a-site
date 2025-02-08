@@ -26,14 +26,14 @@
           </p>
 
           <!-- 詳細情報 -->
-          <p class="card-text" v-if="showDetails"><strong>能力:</strong> {{ character.ability }}</p>
-          <p class="card-text" v-if="showDetails"><strong>誕生日:</strong> {{ character.birthday }}</p>
-          <p class="card-text" v-if="showDetails"><strong>学校:</strong> {{ character.school }}</p>
-          <p class="card-text" v-if="showDetails"><strong>前の学校:</strong> {{ character.formerSchool }}</p>
-          <p class="card-text" v-if="showDetails"><strong>身長:</strong> {{ character.height }}</p>
-          <p class="card-text" v-if="showDetails"><strong>血液型:</strong> {{ character.bloodType }}</p>
-          <p class="card-text" v-if="showDetails"><strong>好きなもの:</strong> {{ character.likes }}</p>
-          <p class="card-text" v-if="showDetails"><strong>性格:</strong> {{ character.personality }}</p>
+          <p class="card-text" v-if="showDetails && character.ability !== '-'"><strong>能力:</strong> {{ character.ability }}</p>
+          <p class="card-text" v-if="showDetails && character.birthday !== '-'"><strong>誕生日:</strong> {{ character.birthday }}</p>
+          <p class="card-text" v-if="showDetails && character.school !== '-'"><strong>学校:</strong> {{ character.school }}</p>
+          <p class="card-text" v-if="showDetails && character.formerSchool !== '-'"><strong>前の学校:</strong> {{ character.formerSchool }}</p>
+          <p class="card-text" v-if="showDetails && character.height !== '-'"><strong>身長:</strong> {{ character.height }}</p>
+          <p class="card-text" v-if="showDetails && character.bloodType !== '-'"><strong>血液型:</strong> {{ character.bloodType }}</p>
+          <p class="card-text" v-if="showDetails && character.likes !== '-'"><strong>好きなもの:</strong> {{ character.likes }}</p>
+          <p class="card-text" v-if="showDetails && character.personality !== '-'"><strong>性格:</strong> {{ character.personality }}</p>
         </div>
       </div>
     </div>
