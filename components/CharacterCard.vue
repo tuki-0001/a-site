@@ -12,7 +12,7 @@
 
           <!-- ヒーローかヴィランかで表示内容を変更 -->
           <p class="card-text">
-            <strong>{{ character.heroName ? 'Hero Name' : 'Villain Name' }}:</strong>
+            <strong>{{ character.heroName ? 'ヒーロー名' : 'ヴィラン名' }}:</strong>
             {{ character.heroName || character.villainName }}
           </p>
 
