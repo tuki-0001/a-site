@@ -2,11 +2,12 @@
   <div class="card mb-4" style="max-width: 540px;">
     <div class="row g-0">
       <!-- キャラクター画像 -->
-      <div class="col-6 col-md-6" @click="toggleDetails">
+      <div class="col-6 col-md-6" @click="showProfile">
         <img 
           :src="getImageUrl(character.image)" 
           :alt="character.name" 
-          class="img-fluid rounded-start"
+          class="img-fluid rounded-start" 
+          style="object-fit: cover; height: 120px; width: 100%;" 
         />
       </div>
 
@@ -25,35 +26,14 @@
           </p>
 
           <!-- 詳細情報、showDetailsがtrueの場合のみ表示 -->
-          <p v-if="showDetails && character.ability !== '-' " class="card-text">
-            <strong>能力:</strong> {{ character.ability }}
-          </p>
-          <p v-if="showDetails && character.birthday !== '-' " class="card-text">
-            <strong>誕生日:</strong> {{ character.birthday }}
-          </p>
-          <p v-if="showDetails && character.school !== '-' " class="card-text">
-            <strong>学校:</strong> {{ character.school }}
-          </p>
-          <p v-if="showDetails && character.formerSchool !== '-' " class="card-text">
-            <strong>前の学校:</strong> {{ character.formerSchool }}
-          </p>
-          <p v-if="showDetails && character.height !== '-' " class="card-text">
-            <strong>身長:</strong> {{ character.height }}
-          </p>
-          <p v-if="showDetails && character.bloodType !== '-' " class="card-text">
-            <strong>血液型:</strong> {{ character.bloodType }}
-          </p>
-          <p v-if="showDetails && character.likes !== '-' " class="card-text">
-            <strong>好きなもの:</strong> {{ character.likes }}
-          </p>
-          <p v-if="showDetails && character.personality !== '-' " class="card-text">
-            <strong>性格:</strong> {{ character.personality }}
-          </p>
-
-          <!-- 詳細表示の切り替えボタン -->
-          <button @click="toggleDetails" class="btn btn-primary mt-3">
-            {{ showDetails ? '閉じる' : '詳細' }}
-          </button>
+          <p v-if="showDetails && character.ability !== '-' " class="card-text"><strong>能力:</strong> {{ character.ability }}</p>
+          <p v-if="showDetails && character.birthday !== '-' " class="card-text"><strong>誕生日:</strong> {{ character.birthday }}</p>
+          <p v-if="showDetails && character.school !== '-' " class="card-text"><strong>学校:</strong> {{ character.school }}</p>
+          <p v-if="showDetails && character.formerSchool !== '-' " class="card-text"><strong>前の学校:</strong> {{ character.formerSchool }}</p>
+          <p v-if="showDetails && character.height !== '-' " class="card-text"><strong>身長:</strong> {{ character.height }}</p>
+          <p v-if="showDetails && character.bloodType !== '-' " class="card-text"><strong>血液型:</strong> {{ character.bloodType }}</p>
+          <p v-if="showDetails && character.likes !== '-' " class="card-text"><strong>好きなもの:</strong> {{ character.likes }}</p>
+          <p v-if="showDetails && character.personality !== '-' " class="card-text"><strong>性格:</strong> {{ character.personality }}</p>
         </div>
       </div>
     </div>
@@ -71,16 +51,20 @@ const props = defineProps({
   },
 });
 
-// 詳細情報表示の状態を管理
+// プロフィール情報を表示するための状態
 const showDetails = ref(false);
 
-// 詳細情報の表示/非表示を切り替える
-const toggleDetails = () => {
+// 画像クリックでプロフィール情報を表示
+const showProfile = () => {
   showDetails.value = !showDetails.value;
 };
 
 // 画像パスを取得する関数
 const getImageUrl = (image) => {
-  return image || '/img/default-image.jpg'; // 画像がない場合はデフォルト画像
+  if (image) {
+    return image;
+  } else {
+    return '/img/default-image.jpg';
+  }
 };
 </script>
