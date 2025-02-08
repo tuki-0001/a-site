@@ -11,7 +11,12 @@
         :key="character.rank"
         :character="character"  
         class="col-md-4 mb-4"
+        @click="selectCharacter(character)"  
       />
+    </div>
+    <div v-if="selectedCharacter" class="mt-4">
+      <TitleWrapper :title="'Selected Character: ' + selectedCharacter.name" />
+      <CharacterCard :character="selectedCharacter" />
     </div>
   </div>
 </template>
@@ -24,7 +29,8 @@ import TitleWrapper from '@/components/TitleWrapper.vue';
 import CharacterCard from '@/components/CharacterCard.vue';
 
 const title = ref('Character Ranking');
-const sortType = ref('rank');
+
+const selectedCharacter = ref(null);
 
 
 const characters = [
@@ -523,4 +529,8 @@ const characters = [
 const sortedCharacters = computed(() => {
   return [...characters].sort((a, b) => a.rank - b.rank); // ランク順
 });
+// キャラクターを選択した時に詳細を表示
+const selectCharacter = (character) => {
+  selectedCharacter.value = character;
+};
 </script>
