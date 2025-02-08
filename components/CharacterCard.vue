@@ -3,7 +3,7 @@
     <div class="row g-0">
       <!-- キャラクター画像 -->
       <div class="col-md-4">
-        <img :src="getImageUrl(character.image)" :alt="character.name" class="img-fluid rounded-start" style="object-fit: cover; height: 120px;">
+        <img :src="getImageUrl(character.image)" :alt="character.name" class="img-fluid rounded-start" style="object-fit: cover; height: 120px;" />
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -35,6 +35,13 @@ const props = defineProps({
 });
 
 const getImageUrl = (image) => {
-  return image ? `/${image}` : '/img/default-image.jpg';
+  // 画像のパスが正しいかを再確認
+  if (image) {
+    // image が `img/` フォルダ内のパスならば、そのまま使います
+    return `/img/${image}`;
+  } else {
+    // デフォルト画像のパス
+    return '/img/default-image.jpg';
+  }
 };
 </script>
