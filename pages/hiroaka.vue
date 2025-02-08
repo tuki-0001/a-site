@@ -261,7 +261,7 @@ const characters = [
   {
     rank: 17,
     name: "ロディ・ソウル",
-    heroName: "-",
+    heroName:"-",
     ability: "魂",
     school: "-",
     formerSchool: "-",
