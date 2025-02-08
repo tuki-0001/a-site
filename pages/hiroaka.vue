@@ -529,8 +529,5 @@ const characters = [
 const sortedCharacters = computed(() => {
   return [...characters].sort((a, b) => a.rank - b.rank); // ランク順
 });
-// キャラクターを選択した時に詳細を表示
-const selectCharacter = (character) => {
-  selectedCharacter.value = character;
-};
+
 </script>
