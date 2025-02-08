@@ -51,12 +51,15 @@ const props = defineProps({
   },
 });
 
-// 初期化時に showDetails 配列を characters の長さに基づいて作成
+// showDetails 配列を作成する前に characters が存在するかチェック
 const showDetails = ref([]);
 
 // characters 配列の変化に応じて showDetails を更新
 watch(() => props.characters, (newCharacters) => {
-  showDetails.value = newCharacters.map(() => false);
+  // characters が定義されている場合のみ処理
+  if (Array.isArray(newCharacters)) {
+    showDetails.value = newCharacters.map(() => false); // 詳細表示状態を false で初期化
+  }
 }, { immediate: true });
 
 // 画像クリックでプロフィール情報を表示
