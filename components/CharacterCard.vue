@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, watchEffect } from 'vue';
 
 // 親コンポーネントから渡される character オブジェクトを受け取る
 const props = defineProps({
@@ -49,15 +49,11 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  showDetails: {  // 親からshowDetailsを受け取る
+    type: Boolean,
+    required: true,
+  }
 });
-
-// プロフィール情報を表示するための状態
-const showDetails = ref(false);
-
-// 画像クリックでプロフィール情報を表示
-const showProfile = () => {
-  showDetails.value = !showDetails.value;
-};
 
 // 画像パスを取得する関数
 const getImageUrl = (image) => {
