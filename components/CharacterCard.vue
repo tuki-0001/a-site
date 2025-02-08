@@ -17,13 +17,13 @@
           <!-- ランキング表示 -->
           <div class="d-flex justify-content-between align-items-center mb-3">
             <h6 class="card-subtitle text-muted" style="font-size: 1.2rem;">Rank:</h6>
-            <div :class="['badge', getRankClass(character.rank)]" style="font-size: 1.5rem; font-weight: bold; padding: 10px 20px; border-radius: 12px;">
+            <div class="badge bg-primary" style="font-size: 1.5rem; font-weight: bold; padding: 10px 20px; border-radius: 12px;">
               {{ character.rank }}
             </div>
           </div>
           
           <!-- キャラクターの名前 -->
-          <h5 :class="getNameClass(character.rank)" class="card-title" style="font-size: 1.4rem; font-weight: bold;">
+          <h5 class="card-title" style="font-size: 1.4rem; font-weight: bold;">
             {{ character.name }}
           </h5>
 
@@ -84,34 +84,6 @@ const getImageUrl = (image) => {
     return '/img/default-image.jpg';
   }
 };
-
-// ランキングに応じたスタイルクラスを返す
-const getRankClass = (rank) => {
-  switch (rank) {
-    case '1':
-      return 'bg-warning text-dark'; // ゴールド
-    case '2':
-      return 'bg-secondary text-white'; // シルバー
-    case '3':
-      return 'bg-bronze text-white'; // ブロンズ
-    default:
-      return 'bg-primary text-white'; // その他は青
-  }
-};
-
-// ランキングに応じた名前の色を返す
-const getNameClass = (rank) => {
-  switch (rank) {
-    case '1':
-      return 'text-warning'; // ゴールド
-    case '2':
-      return 'text-secondary'; // シルバー
-    case '3':
-      return 'text-bronze'; // ブロンズ
-    default:
-      return 'text-primary'; // その他
-  }
-};
 </script>
 
 <style scoped>
@@ -123,5 +95,4 @@ const getNameClass = (rank) => {
 .zoom-effect:hover {
   transform: scale(1.1);  /* ホバー時に画像を10%拡大 */
 }
-
 </style>
