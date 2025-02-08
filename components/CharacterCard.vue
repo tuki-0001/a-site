@@ -20,7 +20,7 @@
           <h5 class="card-title">{{ character.name }}</h5>
 
           <!-- ヒーローかヴィランかで表示内容を変更 -->
-          <p v-if="showDetails" class="card-text">
+          <p v-if="showDetails&& character.heroName !== '-'" class="card-text">
            <strong>{{ character.heroName ? 'ヒーロー名' : 'ヴィラン名' }}:</strong>
             {{ character.heroName || character.villainName }}
           </p>
