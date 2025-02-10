@@ -24,9 +24,6 @@
 
 
 <script setup>
-import { computed, ref } from 'vue';
-import TitleWrapper from '@/components/TitleWrapper.vue';
-import CharacterCard from '@/components/CharacterCard.vue';
 
 const pageTitle = ref('僕のヒーローアカデミア キャラランキング');
 const pageSubtitle = ref('魅力的なキャラたち、ここに集結！');

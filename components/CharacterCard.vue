@@ -58,7 +58,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
 
 // 親コンポーネントから渡される character オブジェクトを受け取る
 const props = defineProps({

@@ -10,7 +10,6 @@
 </template>
 
 <script setup>
-import CharacterCard from '@/components/CharacterCard.vue';
 
 // 親から渡されたキャラクターリストを受け取る
 const props = defineProps({
