@@ -34,7 +34,7 @@
           </p>
 
           <!-- 詳細情報、showDetailsがtrueの場合のみ表示 -->
-          <p v-if="showDetails && character.ability !== '-' " class="card-text" style="font-size: 1.1rem;"><strong>能力:</strong> {{ character.ability }}</p>
+          <p v-if="showDetails && character.ability !== '-' " class="card-text" style="font-size: 1.1rem;"><strong>個性:</strong> {{ character.ability }}</p>
           <p v-if="showDetails && character.birthday !== '-' " class="card-text" style="font-size: 1.1rem;"><strong>誕生日:</strong> {{ character.birthday }}</p>
           <p v-if="showDetails && character.school !== '-' " class="card-text" style="font-size: 1.1rem;"><strong>学校:</strong> {{ character.school }}</p>
           <p v-if="showDetails && character.formerSchool !== '-' " class="card-text" style="font-size: 1.1rem;"><strong>前の学校:</strong> {{ character.formerSchool }}</p>
