@@ -535,7 +535,7 @@ const characters = [
     bloodType: "-",
     likes: "組",
     personality: "潔癖症",
-    image: "",
+    image: "/img/tisaki.jpg",
   },
   {
     rank: 37,
@@ -549,7 +549,7 @@ const characters = [
     bloodType: "-",
     likes: "マジック",
     personality: "エンターテイナー",
-    image: "",
+    image: "/img/迫圧紘.jpg",
   },
   {
     rank: 38,
@@ -563,7 +563,7 @@ const characters = [
     bloodType: "-",
     likes: "-",
     personality: "不気味",
-    image: "",
+    image: "/img/オールフォーワン.jpg",
   },
   {
     rank: 39,
@@ -577,7 +577,7 @@ const characters = [
     bloodType:"A型",
     likes: "忍者",
     personality: "-",
-    image: "",
+    image: "/img/エッジショット.jpg",
   },
   {
     rank: 40,
@@ -591,7 +591,7 @@ const characters = [
     bloodType:"O型",
     likes: "たこ焼き",
     personality: "頼れる兄貴分",
-    image: "",
+    image: "/img/ファットガム.jpg",
   },
   {
     rank: 41,
@@ -605,7 +605,7 @@ const characters = [
     bloodType:"-",
     likes: "りんご",
     personality: "-",
-    image: "",
+    image: "/img/eri.jpg",
   },
   {
     rank: 42,
@@ -619,7 +619,7 @@ const characters = [
     bloodType:"A型",
     likes: "キャラメル",
     personality: "すごく明るい",
-    image: "",
+    image: "/img/hagakure.jpg",
   },
   {
     rank: 43,
@@ -633,7 +633,7 @@ const characters = [
     bloodType:"A型",
     likes: "女性",
     personality: "スケベ一直線",
-    image: "",
+    image: "/img/mineta.jpg",
   },
   {
     rank: 44,
@@ -647,7 +647,7 @@ const characters = [
     bloodType: "A型",
     likes: "紅茶",
     personality:"ジェントルマン",
-    image: "",
+    image: "/img/jenntoru.jpg",
   },
   {
     rank: 45,
@@ -661,7 +661,7 @@ const characters = [
     bloodType:"O型",
     likes: "スチームパンク",
     personality: "チャレンジャー",
-    image: "",
+    image: "/img/hatume.jpg",
   },
   {
     rank: 46,
@@ -675,7 +675,7 @@ const characters = [
     bloodType: "-",
     likes: "-",
     personality:"動じない",
-    image: "",
+    image: "/img/玄野針.jpg",
   },
   {
     rank: 47,
@@ -689,7 +689,7 @@ const characters = [
     bloodType: "-",
     likes: "-",
     personality:"冷静沈着",
-    image: "",
+    image: "/img/kurogiri.jpg",
   },
   {
     rank: 48,
@@ -703,7 +703,7 @@ const characters = [
     bloodType:"AB型",
     likes: "オールマイト、ヒーロー",
     personality: "ユーモア第一",
-    image: "",
+    image: "/img/sa-naitoai.jpg",
   },
   {
     rank: 49,
@@ -717,7 +717,7 @@ const characters = [
     bloodType:"-",
     likes: "-",
     personality: "-",
-    image: "",
+    image: "/img/sigaraki.jpg",
   },
   {
     rank: 50,
@@ -731,7 +731,7 @@ const characters = [
     bloodType:"-",
     likes: "-",
     personality: "-",
-    image: "",
+    image: "/img/駆藤.jpg",
   },
 ];
 
