@@ -717,7 +717,7 @@ const characters = [
     bloodType:"-",
     likes: "-",
     personality: "-",
-    image: "/img/sigaraki.jpg",
+    image: "/img/yoiti.jpg",
   },
   {
     rank: 50,
